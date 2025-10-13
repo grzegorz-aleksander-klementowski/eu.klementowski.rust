@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rust Systems Engineer | Grzegorz Aleksander Klementowski</title>
+    <meta name="description" content="Rust backend engineer delivering reliable event-driven systems, automation, and data flows for ambitious teams.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="branding">
+          <div class="brand-logo" aria-hidden="true">
+            <img src="rust-logo-gear.png" alt="" width="54" height="54" loading="lazy">
+          </div>
+          <div>
+            <p class="brand-name">Grzegorz Aleksander Klementowski</p>
+            <p class="brand-alias">Rust Systems Engineer</p>
+          </div>
+        </div>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="#intro">Intro</a>
+          <a href="#services">Services</a>
+          <a href="#work">Case Studies</a>
+          <a href="#process">Process</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="intro">
+        <div class="container hero-grid">
+          <div class="hero-main">
+            <h1>Rust systems built to win demanding backends.</h1>
+            <p class="hero-lead">
+              I help founders and engineering leaders ship production-grade Rust services, automate critical workflows,
+              and unblock data flows that must never fail.
+            </p>
+            <ul class="hero-highlights">
+              <li>Design and implementation of event-driven, CQRS/ES-ready architectures</li>
+              <li>Production automation: CLI tools, integrations, and secure infrastructure scripts</li>
+              <li>Rapid concept-to-MVP delivery with tight feedback loops and measurable KPIs</li>
+            </ul>
+            <div class="hero-cta">
+              <a class="btn primary" href="mailto:grzegorz.aleksander@klementowski.pl">Discuss your project</a>
+              <a class="btn outline" href="#work">See case studies</a>
+            </div>
+            <dl class="hero-metrics">
+              <div>
+                <dt>Rust projects shipped</dt>
+                <dd><span class="metric-number">8</span> production-grade tools and services</dd>
+              </div>
+              <div>
+                <dt>Hands-on exercises</dt>
+                <dd><span class="metric-number">45</span> completed Rust practice crates</dd>
+              </div>
+              <div>
+                <dt>Engagement focus</dt>
+                <dd>Rust backend, distributed systems, data-intensive automation</dd>
+              </div>
+              <div>
+                <dt>Response time</dt>
+                <dd>48h for new project briefs</dd>
+              </div>
+              <div>
+                <dt>Location</dt>
+                <dd>Remote, CET (UTC+1), working with EU &amp; US clients</dd>
+              </div>
+            </dl>
+          </div>
+          <aside class="hero-media" aria-hidden="true">
+            <div class="hero-logo">
+              <img src="rust-logo-crab.png" alt="Ferris the Rust crab mascot" width="220" height="220" loading="lazy">
+            </div>
+            <div class="code-demo">
+              <div class="code-header">
+                <span></span>
+                <span></span>
+                <span></span>
+                <p>cargo run --release</p>
+              </div>
+              <pre class="code-lines">
+<span class="code-line">use cqrs_es::{Aggregate, AggregateError};</span>
+<span class="code-line">use chrono::Utc;</span>
+<span class="code-line">pub struct InventoryService;</span>
+<span class="code-line">impl InventoryService {</span>
+<span class="code-line">    pub async fn reserve(&self, cmd: ReserveStock) -&gt; Result&lt;EventId, AggregateError&gt; {</span>
+<span class="code-line">        audit(&cmd, Utc::now());</span>
+<span class="code-line">        Ok(self.cqrs.execute(cmd).await?)</span>
+<span class="code-line">    }</span>
+<span class="code-line">}</span>
+              </pre>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="services" aria-labelledby="services-heading">
+        <div class="container">
+          <h2 id="services-heading">High-impact services</h2>
+          <p class="section-intro">
+            Every engagement starts with a measurable goal: increase throughput, reduce defects, or unlock a new product capability.
+            I combine Rust expertise with a systems engineering mindset to move those numbers quickly.
+          </p>
+          <div class="skills-grid">
+            <article>
+              <h3>Event-driven backends</h3>
+              <p>Design and implementation of resilient services ready for scale.</p>
+              <ul>
+                <li>CQRS/ES aggregates, projections, and event stores</li>
+                <li>Async execution with Tokio and Postgres</li>
+                <li>Monitoring, logging, and rollback-friendly deployment</li>
+              </ul>
+            </article>
+            <article>
+              <h3>Automation &amp; Dev Productivity</h3>
+              <p>Rust-powered CLI tools that remove manual work and enforce quality.</p>
+              <ul>
+                <li>Domain-specific automation for operations teams</li>
+                <li>Integration with legacy systems, REST, and system APIs</li>
+                <li>Unit + integration tests for safe rollout</li>
+              </ul>
+            </article>
+            <article>
+              <h3>Data reliability</h3>
+              <p>Bridging Rust services with SQL, analytics, and reporting pipelines.</p>
+              <ul>
+                <li>Postgres, MariaDB, MS SQL Server expertise</li>
+                <li>Schema design, migrations, and ETL orchestration</li>
+                <li>Audit trails, compliance, and repeatable reporting</li>
+              </ul>
+            </article>
+            <article>
+              <h3>Delivery enablement</h3>
+              <p>Lean delivery process aligned with your roadmap.</p>
+              <ul>
+                <li>GitHub Actions CI/CD, multi-target toolchains</li>
+                <li>Transparent weekly progress and KPI tracking</li>
+                <li>Documentation and onboarding support for in-house teams</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="work" aria-labelledby="work-heading">
+        <div class="container">
+          <h2 id="work-heading">Selected Rust case studies</h2>
+          <div class="card-grid">
+            <article class="card">
+              <header>
+                <h3>CQRS Stock Control for Kubex Wholesaler</h3>
+                <p class="card-meta">Rust · Tokio · cqrs_es · Postgres</p>
+              </header>
+              <p>
+                Delivered an inventory core where every movement is event-sourced and auditable.
+                Implemented aggregates, domain commands, and async projections to keep stock levels trustworthy even under heavy load.
+              </p>
+              <ul>
+                <li>30% faster reconciliation thanks to real-time projections</li>
+                <li>Domain errors surfaced early with custom Rust error types</li>
+                <li>Deployment-ready integration with Postgres event store</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <header>
+                <h3>Advent of Code 2024 Delivery Practice</h3>
+                <p class="card-meta">Rust · Algorithms · CLI</p>
+              </header>
+              <p>
+                Built a suite of production-style binaries solving complex data puzzles.
+                Reinforced habits around parsing, graph processing, and simulation under test discipline that translates directly to client work.
+              </p>
+              <ul>
+                <li>State-machine parser with feature toggles (<code>do()</code>/<code>don't()</code>)</li>
+                <li>Topological sorting engine for workflow validation</li>
+                <li>Cycle detection to prevent production deadlocks</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <header>
+                <h3>Operational Tooling Suite</h3>
+                <p class="card-meta">Rust · Automation · Testing</p>
+              </header>
+              <p>
+                Crafted CLI utilities that replace brittle scripting with typed, testable Rust code:
+                grade calculators, Lotto simulator with UX polish, and system admin helpers for Linux teams.
+              </p>
+              <ul>
+                <li>Traits-based architecture for maintainable business logic</li>
+                <li>Comprehensive unit and integration test coverage</li>
+                <li>System integrations via <code>std::process::Command</code></li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <header>
+                <h3>Rust Small Test Tools</h3>
+                <p class="card-meta">Rust · Clap · ANSI UX</p>
+              </header>
+              <p>
+                Deployed a collection of reliability-first utilities:
+                swap management wrappers, ANSI color tooling, VCF generators, and pricing calculators with clear reporting.
+              </p>
+              <ul>
+                <li>Operator overloading for precise financial differences</li>
+                <li>Strong typing for configuration and validation</li>
+                <li>Reusable modules ready to embed in larger systems</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <header>
+                <h3>Rust Book Exercises with CI/CD Discipline</h3>
+                <p class="card-meta">Rust · GitHub Actions · GPG</p>
+              </header>
+              <p>
+                Documented mastery of Rust fundamentals through extended book exercises.
+                Every chapter includes original code, tests, and automated pipelines to ensure production hygiene.
+              </p>
+              <ul>
+                <li>Cross-platform CI (Ubuntu + macOS, stable/beta/nightly)</li>
+                <li>Repository protected by signed commits</li>
+                <li>Reusable patterns for onboarding junior engineers</li>
+              </ul>
+            </article>
+
+            <article class="card">
+              <header>
+                <h3>Peer-to-Peer Research Track</h3>
+                <p class="card-meta">Rust · Networking · R&amp;D</p>
+              </header>
+              <p>
+                Ongoing exploration of decentralized information systems in Rust.
+                Focused on fault tolerance, predictable delivery, and lean code free of unnecessary dependencies.
+              </p>
+              <ul>
+                <li>Custom protocol design with deterministic testing</li>
+                <li>Incremental roadmap tied to real business pain points</li>
+                <li>Built with TDD and observability from day one</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="process" aria-labelledby="process-heading">
+        <div class="container">
+          <h2 id="process-heading">Engagement process</h2>
+          <div class="timeline">
+            <article>
+              <h3>01. Strategy session</h3>
+              <p class="timeline-meta">Discovery · 45 minutes</p>
+              <p>We map desired business outcomes, technical constraints, and success metrics. Expect direct questions and a clear statement of work within two business days.</p>
+            </article>
+            <article>
+              <h3>02. Architecture &amp; proof</h3>
+              <p class="timeline-meta">Design &amp; validation</p>
+              <p>High-level architecture, risk analysis, and a scoped proof of concept. Stakeholders receive code walkthroughs and performance benchmarks before full build-out.</p>
+            </article>
+            <article>
+              <h3>03. Delivery sprints</h3>
+              <p class="timeline-meta">Implementation</p>
+              <p>Weekly increments with CI in place from day one. You get automated reports, test coverage updates, and access to repositories, dashboards, and documentation.</p>
+            </article>
+            <article>
+              <h3>04. Launch &amp; enablement</h3>
+              <p class="timeline-meta">Handover &amp; optimisation</p>
+              <p>Final hardening, observability setup, and production rollout. I handle knowledge transfer and remain available for iterative improvements or extended support.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="container footer-grid">
+        <div>
+          <h2>Let's build your next Rust system</h2>
+          <p>Share your brief and I'll respond with availability, timeline, and a proposed delivery plan.</p>
+          <ul class="contact-list">
+            <li><span>Email:</span> <a href="mailto:dev@klementowski.eu">dev@klementowski.eu</a></li>
+            <li><span>Phone:</span> <a href="tel:+48792502920">+48&nbsp;792&nbsp;502&nbsp;920</a></li>
+            <li><span>GitHub:</span> <a href="https://github.com/grzegorz-aleksander-klementowski" target="_blank" rel="noopener">github.com/grzegorz-aleksander-klementowski</a></li>
+            <li><span>Website:</span> <a href="https://klementowski.pl" target="_blank" rel="noopener">klementowski.pl</a></li>
+          </ul>
+        </div>
+        <p class="footer-note">© 2024 Grzegorz Aleksander Klementowski. Rust systems engineered for measurable impact.</p>
+      </div>
+    </footer>
+  </body>
+</html>
